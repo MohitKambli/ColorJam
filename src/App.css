@@ -2,17 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -24,15 +13,212 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+body {
+  width: 100%;
+  height: 100%;
+  background: var(--gradient-background);
+  transition: background 0.5s ease-in-out;
+  animation: gradientAnimation 5s infinite;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes gradientAnimation {
+  0%, 100% {
+    --gradient-start: var(--gradient-background);
+    --gradient-end: var(--gradient-background);
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    --gradient-start: var(--gradient-background);
+    --gradient-end: var(--gradient-background);
   }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.loading-dot {
+  animation: blink 1s infinite;
+}
+
+.color-box {
+  width: 90px;
+  height: 90px;
+  border-radius: 30%;
+  outline: 2px solid #000;
+}
+
+.color-item {
+  display: flex;
+  align-items: center;
+  padding: 1em;
+}
+
+.color-list {
+  position: fixed;
+  right: 3%;
+  top: 25%;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  outline: 2px solid #000;
+  border-radius: 10px;
+}
+
+.color-code {
+  padding: 1.8em;
+  font-size: 22px;
+  font-family: 'Multicolore', sans-serif;
+  font-weight: bold;
+}
+
+.file-input-label {
+  display: block;
+  position: absolute;
+  right: 4%;
+  top: 8%;
+  outline: 2px solid black;
+  border-radius: 10px;
+  padding: 1em;
+  font-size: 32px;
+  cursor: pointer;
+  transition: color 1s ease;
+  background-color: #000000; /* Set the background color */
+  color: #FFFFFF; /* Set the default text color */
+  transition: color 0.5s ease;
+}
+
+.file-input-label:hover {
+  color: invert(#FFFFFF); /* Invert the text color on hover */
+  background-color: invert(#000000); /* Invert the background color on hover */
+  filter: none; /* Remove the invert filter from the label */
+}
+
+.color-text {
+  padding: 1em;
+}
+
+.image-container {
+  position: absolute;
+  top: 30%;
+  left: 31.5%;
+  width: 720px; /* Set the desired width of the container */
+  height: 500px; /* Set the desired height of the container */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  outline: 2px solid #000;
+  border-radius: 10px;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@font-face {
+  font-family: 'Multicolore';
+  src: url('./Multicolore-Regular.ttf') format('truetype');
+}
+
+.heading-style {
+  font-family: 'Multicolore', sans-serif;
+  font-size: 90px;
+  font-weight: bold;
+}
+
+
+
+
+
+/* Styles for mobile devices */
+
+@media screen and (orientation: portrait) {
+  .color-list {
+    left: 50%;
+    top: 18.5%;
+    padding: 1%;
+  }
+
+  .file-input-label {
+    left: 13%;
+    font-size: 18px;
+  }
+
+  .image-container {
+    top: 60%;
+    left: 31.5%;
+    transform: translateX(-50%);
+    width: 50%;
+    max-width: none;
+    max-height: none;
+  }
+
+  .color-box {
+    width: 35px;
+    height: 35px;
+    border-radius: 30%;
+    outline: 2px solid #000;
+  }
+  
+  .color-item {
+    display: flex;
+    align-items: center;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  
+  .color-code {
+    font-size: 18px;
+    font-family: 'Multicolore', sans-serif;
+    font-weight: bold;
+  }
+
+  .heading-style {
+    font-size: 60px;
+  }
+}
+
+.slider-container {
+  top: 23%;
+  left: 3%;
+  position: absolute;
+  height: 600px; /* Set the desired height of the slider container */
+  overflow: hidden;
+  border-radius: 2%;
+  outline: 2px solid black;
+}
+
+.slider {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+
+.slider::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar width */
+  background: transparent; /* Set the scrollbar background color */
+}
+
+.slider img {
+  width: 100%;
+  height: 40%;
+  scroll-snap-align: start;
+  outline: 2px solid black;
 }
