@@ -83,26 +83,24 @@ function App() {
 
   return (
     <div className="App">
-      <div className="Content">
-        <h1 className="heading-style">ColorJam{isLoading && <LoadingDot/>}</h1>
-        <div className="div-file-input-label">
-          <label htmlFor="file" className="file-input-label">
-            <input
-              type="file"
-              id="file"
-              onChange={handleFileChange}
-              accept="image/*"
-              style={{ display: 'none' }}
-              disabled={isInputDisabled}
-            />
-            Browse an Image
-          </label>
-        </div>
+      <h1 className="heading-style">ColorJam{isLoading && <LoadingDot/>}</h1>
+      <div className="div-file-input-label">
+        <label htmlFor="file" className="file-input-label">
+          <input
+            type="file"
+            id="file"
+            onChange={handleFileChange}
+            accept="image/*"
+            style={{ display: 'none' }}
+            disabled={isInputDisabled}
+          />
+          Browse an Image
+        </label>
       </div>
       <div className="color-list">
         {
           fetchedColors.length === 0 ? (
-            <p>Dominant colors will be loaded here...</p>
+            <p>Dominant colors would be loaded here...</p>
           ) : (
             fetchedColors.map((color, index) => (
               <div key={index} className="color-item">

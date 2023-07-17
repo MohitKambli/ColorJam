@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  display: flex;
+  position: relative;
 }
 
 .App-header {
@@ -49,6 +51,7 @@ body {
 }
 
 .color-box {
+  position: absolute;
   width: 90px;
   height: 90px;
   border-radius: 30%;
@@ -58,13 +61,17 @@ body {
 .color-item {
   display: flex;
   align-items: center;
-  padding: 1em;
+  padding: 0.3em;
 }
 
 .color-list {
-  position: fixed;
-  right: 3%;
-  top: 25%;
+  position: absolute;
+  flex: 1;
+  right: 2.5%;
+  top: 90%;
+  bottom: 0;
+  height: 205%;
+  width: 17%;
   display: inline-block;
   justify-content: center;
   align-items: center;
@@ -78,17 +85,20 @@ body {
   font-size: 22px;
   font-family: 'Multicolore', sans-serif;
   font-weight: bold;
+  margin-left: 90px;
 }
 
 .file-input-label {
   display: block;
   position: absolute;
   right: 4%;
-  top: 8%;
+  top: 30%;
+  bottom: 30%;
+  flex: 1;
   outline: 2px solid black;
   border-radius: 10px;
   padding: 1em;
-  font-size: 32px;
+  font-size: 26px;
   cursor: pointer;
   transition: color 1s ease;
   background-color: #000000; /* Set the background color */
@@ -108,11 +118,12 @@ body {
 
 .image-container {
   position: absolute;
-  top: 30%;
-  left: 31.5%;
-  width: 720px; /* Set the desired width of the container */
-  height: 500px; /* Set the desired height of the container */
-  display: flex;
+  top: 100%;
+  bottom: 0;
+  left: 32.5%;
+  width: 635px; /* Set the desired width of the container */
+  height: 430px; /* Set the desired height of the container */
+  flex: 2;
   align-items: center;
   justify-content: center;
   overflow: hidden;
@@ -135,6 +146,8 @@ body {
   font-family: 'Multicolore', sans-serif;
   font-size: 90px;
   font-weight: bold;
+  position: relative;
+  left: 35%;
 }
 
 
@@ -190,10 +203,13 @@ body {
 }
 
 .slider-container {
-  top: 23%;
-  left: 3%;
+  top: 70%;
+  left: 2%;
+  bottom: 0;
   position: absolute;
-  height: 600px; /* Set the desired height of the slider container */
+  flex: 1;
+  width: 400px;
+  height: 250%; /* Set the desired height of the slider container */
   overflow: hidden;
   border-radius: 2%;
   outline: 2px solid black;
