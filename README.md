@@ -25,8 +25,8 @@
 <p>https://spiffy-fox-4a204c.netlify.app/</p>
 <h2>App Screenshots</h2>
 <div style= "float: left;width: 20%;padding: 100px;">
-  <img src="https://github.com/MohitKambli/ColorJam/blob/main/Screenshots/S1.png" width=500 height=250>
-  <img src="https://github.com/MohitKambli/ColorJam/blob/main/Screenshots/S2.png" width=500 height=250>
-  <img src="https://github.com/MohitKambli/ColorJam/blob/main/Screenshots/S3.png" width=500 height=250>
-  <img src="https://github.com/MohitKambli/ColorJam/blob/main/Screenshots/S4.png" width=500 height=250>
+  <img src="https://github.com/MohitKambli/ColorJam/blob/main/Screenshots/S1.png" width=600 height=300>
+  <img src="https://github.com/MohitKambli/ColorJam/blob/main/Screenshots/S2.png" width=600 height=300>
+  <img src="https://github.com/MohitKambli/ColorJam/blob/main/Screenshots/S3.png" width=600 height=300>
+  <img src="https://github.com/MohitKambli/ColorJam/blob/main/Screenshots/S4.png" width=600 height=300>
 </div>
